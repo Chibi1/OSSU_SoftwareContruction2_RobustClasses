@@ -1,6 +1,7 @@
 package model;
 
 import exceptions.AllergyException;
+import exceptions.MessyError;
 import exceptions.NotHungry;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class Keeper {
             int eatenTimes = animal.eat();
             System.out.println("Animal has been fed "+ eatenTimes);
         }
+        throw new MessyError();
     }
 
 
