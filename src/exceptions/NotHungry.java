@@ -1,5 +1,5 @@
 package exceptions;
 
-public class NotHungry extends Exception {
+public class NotHungry extends DidntEat {
 
 }
