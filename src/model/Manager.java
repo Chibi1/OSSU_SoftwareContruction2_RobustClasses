@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.NotHungry;
+
 import java.util.List;
 
 public class Manager {
@@ -13,7 +15,12 @@ public class Manager {
     }
 
     public void manage() {
-        keeper.feed();
+        try {
+            keeper.feed();
+        } catch (NotHungry notHungry) {
+            System.out.println("Feed less often.");
+            notHungry.printStackTrace();
+        }
     }
 
 
