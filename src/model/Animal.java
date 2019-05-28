@@ -9,6 +9,12 @@ public class Animal {
     private boolean isAllergic = false;
     private int eaten = 0;
 
+    public Animal(boolean hungry, boolean allergic) {
+        this.isHungry = hungry;
+        this.isAllergic = allergic;
+
+    }
+
     // getters
     public boolean isHungry() { return isHungry; }
 

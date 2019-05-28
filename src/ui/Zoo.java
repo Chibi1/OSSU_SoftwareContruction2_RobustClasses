@@ -5,6 +5,7 @@ import exceptions.MessyError;
 import model.Animal;
 import model.Keeper;
 import model.Manager;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class Zoo {
     public static void main(String[] args) {
         List<Animal> animals = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            animals.add(new Animal());
+            animals.add(new Animal(true, false));
         }
         Keeper keeper = new Keeper(animals);
         Manager manager = new Manager(animals, keeper);
@@ -31,6 +32,8 @@ public class Zoo {
         }
         System.out.println("And everything goes on as normal");
     }
+
+
 
 
 }
