@@ -4,7 +4,7 @@ import exceptions.NotHungry;
 
 public class Animal {
 
-    private boolean isHungry = false;
+    private boolean isHungry = true;
     private boolean hungry;
     private int eaten = 0;
 

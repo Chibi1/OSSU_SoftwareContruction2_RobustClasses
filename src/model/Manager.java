@@ -22,6 +22,8 @@ public class Manager {
         } catch (NotHungry notHungry) {
             System.out.println("Feed less often.");
             throw new BrokeException();
+        } finally {
+            System.out.println("Manager says: Regardless of what happens");
         }
     }
 
