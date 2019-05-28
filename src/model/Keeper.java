@@ -13,6 +13,7 @@ public class Keeper {
     }
 
     public void feed() throws NotHungry {
+        System.out.println("Keeper is feeding the animals");
         for (Animal animal : animalsToFeed) {
             int eatenTimes = animal.eat();
             System.out.println("Animal has been fed "+ eatenTimes);

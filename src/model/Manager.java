@@ -1,5 +1,6 @@
 package model;
 
+import exceptions.BrokeException;
 import exceptions.NotHungry;
 
 import java.util.List;
@@ -14,12 +15,13 @@ public class Manager {
         this.keeper = keeper;
     }
 
-    public void manage() {
+    public void manage() throws BrokeException {
+        System.out.println("Manager is managing the keeper");
         try {
             keeper.feed();
         } catch (NotHungry notHungry) {
             System.out.println("Feed less often.");
-            notHungry.printStackTrace();
+            throw new BrokeException();
         }
     }
 

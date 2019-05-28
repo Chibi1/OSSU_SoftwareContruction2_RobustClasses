@@ -1,5 +1,6 @@
 package ui;
 
+import exceptions.BrokeException;
 import model.Animal;
 import model.Keeper;
 import model.Manager;
@@ -16,7 +17,12 @@ public class Zoo {
         }
         Keeper keeper = new Keeper(animals);
         Manager manager = new Manager(animals, keeper);
-        manager.manage();
+        System.out.println("Zoo is open for business.");
+        try {
+            manager.manage();
+        } catch (BrokeException e) {
+            System.out.println("Reduce costs!");
+        }
     }
 
 
